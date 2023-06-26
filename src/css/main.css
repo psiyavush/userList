@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: #333;
+    color: #fff;
+}
+
+.header{
+    background-color: #222;
+    padding: 20px 100px;
+    font-weight: 600;
+}
+
+main{
+    margin: 50px 100px;
+    width: 50%;
+    float: left;
+}
+
+aside{
+    width: 20%;
+    margin-top: 50px;
+    margin-left: 5%;
+    float: left;
+}
+
+main .user {
+    margin-bottom: 50px;
+    background-color: #3e8fa0;
+    padding: 20px;
+}
+
+main .delete-icon{
+    float: right;
+    color: #134b57;
+    cursor: pointer;
+    /* свойство transform: scale(n); изменяет размер элемента по горизонтали и вертикали, где n — это коэффициент масштабирования.
+    Так, для значения scale(2) элемент увеличится в два раза относительно исходного размера по обеим осям. */
+    transform: scale(2);
+}
+
+main .edit-icon{
+    float: right;
+    margin-right: 25px;
+    color: #165664;
+    cursor: pointer;
+    transform: scale(2);
+}
+
+main .delete-icon:hover,
+main .edit-icon:hover {
+    opacity: 0.5;
+}
+
+form input:not([type="checkbox"]), 
+form textarea, 
+form button {
+    width: 90%;
+    padding: 15px 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    border: 0;
+    background: #222;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+}
+
+form input[type="checkbox"]{
+    margin: 10px;
+}
+form button{
+    width: 100%;
+    cursor: pointer;
+    /* transition задает плавную анимацию перехода между двумя состояниями элемента.
+    В данном случае transition устанавливает свойство transform (изменение размера, положения и т.д. элемента)
+    на продолжительность 500 мс (0,5 секунды) с плавным переходом с помощью функции смягчения ease. */
+    transition: transform 500ms ease;
+}
+form button:hover{
+    transform: scale(1.1);
+}
+
+.user form{
+    margin-top: 20px;
+}
+
+.user form input,
+.user form textarea,
+.user form button{
+    background: #134b57;
+}
+
+.user form button:hover{
+    transform: scale(1.01);
+}
